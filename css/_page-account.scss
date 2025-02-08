@@ -1,0 +1,113 @@
+.page__account{
+  background-color:$dlblue;
+  padding: 4rem 0;
+  .container{
+    @include mainStructure();
+  }
+  &__wrapper{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    gap: 1.2rem;
+  }
+  &__person-card-wrapper{
+    background: linear-gradient(0deg, $lblue 0%, $ldblue 100%);
+    border-radius: 0.9rem;
+    padding: 2px;
+  }
+  &__person-card{
+    background: rgb(1,4,17);
+    background: linear-gradient(0deg, $ldblue 0%, $lblue 100%);
+    border-radius: 0.9rem;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    &::after{
+      content:'';
+      width: 60%;
+      height: 100%;
+      background:linear-gradient(0deg, $overlaydark 0%, $overlaylight 100%);
+      opacity: 0.06;
+      clip-path: polygon(80% 0, 100% 0, 100% 100%, 0% 100%);
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+    &__top{
+      display: grid;
+      grid-template-columns: max-content 1fr;
+      gap: 1.2rem;
+      align-content: center;
+      padding-bottom: 1.7rem;
+      border-bottom: 1px solid $black;
+
+      &__profile-picture{
+        border-radius: 100%;
+        width: 4rem;
+        aspect-ratio: 1/1;
+        overflow: hidden;
+        img{
+          @include imageCover(50%, 50%);
+        }
+      }
+      &__profile-info{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 0.5rem;
+        a{
+          font-size: 0.6rem;
+          font-weight: 600;
+          color:$black;
+        }
+      }
+    }
+    &__bottom{
+      padding-top: 1.7rem;
+      &__points{
+        font-size: 0.6rem;
+        font-weight: 400;
+        color:$black;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+        .actual-points{
+          font-size: 1.2rem;
+          font-weight: 800;
+          color:$black;
+        }
+      }
+      &__progress-area{
+        padding-top: 1.7rem;
+        .progress-bar{
+          width: 100%;
+          height: 6px;
+          background-color: $gray;
+          position: relative;
+          margin-bottom: 0.75rem;
+          &:before{
+            content:'';
+            width: 50%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: $black;
+          }
+        }
+        .levels{
+          display: flex;
+          align-content: center;
+          justify-content: space-between;
+          .progress-bar-level{
+            font-size: 0.65rem;
+            font-weight: 400;
+          }
+        }
+
+      }
+    }
+
+  }
+}
