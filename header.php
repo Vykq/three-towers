@@ -7,9 +7,14 @@
     <?php wp_head(); ?>
 </head>
 <body>
+<?php
+$button = array();
+$button['title'] = __('Let\'s Collaborate', 'tt');
+$button['url'] = '#';
+?>
 <header class="header">
     <div class="header__container">
-        <div class="header__container__grid">
+        <div class="header__grid">
             <div class="header__logo">
                 <a href="<?php echo get_home_url(); ?>" class="logo-link">
                     <svg width="136" height="40" viewBox="0 0 136 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -26,30 +31,9 @@
                     <a href="#contact-us"><?php _e('Contact us','tt'); ?></a>
                 </nav>
             </div>
-            <a href="#collaborate" class="header__main-button--btn">
-                <svg class="header__main-button--btn--left-side" width="27" height="42" viewBox="0 0 27 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M27 1H17.7714C16.5492 1 15.3941 1.55873 14.6354 2.51688L1.9662 18.5169C0.814122 19.9718 0.81412 22.0282 1.9662 23.4831L14.6354 39.4831C15.3941 40.4413 16.5492 41 17.7714 41H27" stroke="url(#paint0_linear_2002_29)" stroke-width="1.5"/>
-                    <defs>
-                        <linearGradient id="paint0_linear_2002_29" x1="13.5" y1="1" x2="13.5" y2="41" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#5EDFFF"/>
-                            <stop offset="1" stop-color="#1D58F5"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-                <span class="text">
-                    <?php _e('Let\'s Collaborate','tt'); ?>
-                </span>
-                <svg class="header__main-button--btn--right-side" width="27" height="42" viewBox="0 0 27 42" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M-7.15256e-07 1H9.22863C10.4508 1 11.6059 1.55873  12.3646 2.51688L25.0338 18.5169C26.1859 19.9718 26.1859 22.0282 25.0338 23.4831L12.3646 39.4831C11.6059 40.4413 10.4508 41 9.22863 41H-7.15256e-07" stroke="url(#paint0_linear_2002_32)" stroke-width="1.5"/>
-                    <defs>
-                        <linearGradient id="paint0_linear_2002_32" x1="13.5" y1="1" x2="13.5" y2="41" gradientUnits="userSpaceOnUse">
-                            <stop stop-color="#5EDFFF"/>
-                            <stop offset="1" stop-color="#1D58F5"/>
-                        </linearGradient>
-                    </defs>
-                </svg>
-
-            </a>
+            <div class="header__button-area">
+                <?php echo get_template_part('components/button','',['button' => $button]); ?>
+            </div>
             <div class="header__mobile-menu-button">
                 <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <g id="SVGRepo_bgCarrier" stroke-width="0"></g>

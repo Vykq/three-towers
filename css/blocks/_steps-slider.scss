@@ -1,0 +1,81 @@
+.steps-block{
+  overflow: hidden;
+  margin: 4rem 0;
+  &__container {
+    @include mainStructure();
+  }
+  &__top {
+    padding: 0.5rem 0 1rem;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    border-bottom: 1px solid $white;
+    @media (max-width: 400px){
+      grid-template-columns: 1fr;
+    }
+  }
+  &__bottom{
+
+  }
+  &__bottom--slider-area{
+    overflow: hidden;
+  }
+  &__title{
+    color:$white;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+  &__arrows{
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 0.6rem;
+  }
+  &__arrow{
+    border-radius: 100%;
+    width: 2.2rem;
+    aspect-ratio: 1/1;
+    overflow: hidden;
+    background-color: #FFFFFF20;
+    cursor: pointer;
+    svg{
+      width: 100%;
+      height: 100%;
+    }
+  }
+  &__slider{
+    margin-top: 2rem;
+  }
+  &__slide{
+    border-radius: 0.9rem;
+    border:1px solid $white;
+    background-color: $cardbg;
+    padding: 2rem 1rem;
+  }
+  &__slide-top{
+    display: grid;
+    grid-template-columns: 1fr max-content;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__slide-number{
+    font-size: 1.2rem;
+    font-weight: 400;
+    color:$stepcolor;
+  }
+  &__small-number{
+    font-size: 0.7rem;
+    font-weight: 400;
+    color:$white;
+    text-align: right;
+  }
+  &__slide-title{
+    margin-top: 2rem;
+    color:$white;
+    font-size: 0.7rem;
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+}

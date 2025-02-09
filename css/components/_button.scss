@@ -1,0 +1,32 @@
+.button {
+  &--primary {
+    display: inline-block;
+    width: fit-content;
+    color: $white;
+    position: relative;
+    font-size: 0.7rem;
+    font-weight: 400;
+    .text {
+      border-top: 1px solid #FFFFFF10;
+      border-bottom: 1px solid #FFFFFF10;
+      display: block;
+      padding: 0.5rem 1rem;
+    }
+    .left-side {
+      width: 1.5rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translateX(-100%);
+    }
+    .right-side {
+      width: 1.5rem;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      right: 0;
+      transform: translateX(100%);
+    }
+  }
+}

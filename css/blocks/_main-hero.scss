@@ -1,0 +1,86 @@
+.main-hero-block{
+
+  .container{
+    @include mainStructure();
+  }
+  &__top {
+    padding: 0.5rem 0 1rem;
+    display: grid;
+    grid-template-columns: 0.25fr 1fr;
+    gap: 2rem;
+    align-items: center;
+    border-bottom: 1px solid $white;
+    @media (max-width: 400px){
+      grid-template-columns: 1fr;
+    }
+    &--title{
+      color:$white;
+      font-size: 1.2rem;
+      font-weight: 800;
+      text-transform: uppercase;
+    }
+    &--subtitle{
+      color:$white;
+      font-size: 0.6rem;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+  &__bottom{
+    padding: 2rem 0;
+    &__cards-wrapper{
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.2rem;
+      @media (max-width: 768px){
+        grid-template-columns: 1fr;
+      }
+      &__single-card{
+        padding: 2rem 1rem;
+        border-radius: 0.9rem;
+        border:1px solid #FFFFFF10;
+        background-color: $cardbg;
+        &.completed{
+          opacity: 0.4;
+        }
+        &.active{
+          box-shadow: 0px 100px 109px 0px rgba(0, 0, 0, 0.05), 0px 41px 45px 0px rgba(0, 0, 0, 0.07), 0px 22px 24px 0px rgba(0, 0, 0, 0.09), 0px 12px 13px 0px rgba(0, 0, 0, 0.11), 0px 6px 7px 0px rgba(0, 0, 0, 0.13), 0px 2px 3px 0px rgba(0, 0, 0, 0.19);
+        }
+        &__top{
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          align-items: center;
+          justify-content: space-between;
+          margin-bottom: 2rem;
+          &__step{
+            font-size: 1.2rem;
+            font-weight: 400;
+            color:$stepcolor;
+          }
+          &__small-number{
+            font-size: 0.7rem;
+            font-weight: 400;
+            color:$white;
+            text-align: right;
+          }
+        }
+        &__bottom{
+          &__title{
+            color:$white;
+            text-transform: uppercase;
+            font-weight: 800;
+            font-size: 0.8rem;
+            margin-bottom: 0.7rem;
+          }
+          &__text{
+            font-size: 0.7rem;
+            color:$white;
+            font-weight: 400;
+            line-height: 180%;
+          }
+
+        }
+      }
+    }
+  }
+}

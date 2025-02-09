@@ -7,6 +7,8 @@ $black : #000;
 $gray: #d9d9d9;
 $overlaydark : #28344E;
 $overlaylight: #46577C;
+$cardbg : #10173B;
+$stepcolor : #007AFF;
 
 @mixin mainStructure() {
   max-width: 1440px;
@@ -14,12 +16,15 @@ $overlaylight: #46577C;
   padding: 0 1rem;
   @media (max-width: 1536px){
     max-width: 1280px;
+    padding: 0 0.7rem;
   }
   @media (max-width: 1280px){
     max-width: 1024px;
+    padding: 0 0.5rem;
   }
   @media (max-width: 1024px){
     max-width: 95%;
+    padding: 0;
   }
 }
 

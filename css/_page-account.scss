@@ -1,6 +1,30 @@
 .page__account{
   background-color:$dlblue;
   padding: 4rem 0;
+  background-size: 100%;
+  position: relative;
+  &::before{
+    content:'';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    background-image:url('/assets/images/background.webp');
+    background-size: cover;
+    opacity: 0.2;
+    backdrop-filter: blur(7px);
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 26.5rem;
+    background: linear-gradient(0deg, rgba(0,0,0,0) 0%, $dlblue 100%);
+  }
   .container{
     @include mainStructure();
   }
@@ -8,11 +32,20 @@
     display: grid;
     grid-template-columns: 1fr 3fr;
     gap: 1.2rem;
+    position: relative;
+    z-index: 1;
+    @media (max-width: 768px){
+      grid-template-columns: 1fr;
+    }
+  }
+  &__page-content{
+    display: grid;
   }
   &__person-card-wrapper{
     background: linear-gradient(0deg, $lblue 0%, $ldblue 100%);
     border-radius: 0.9rem;
     padding: 2px;
+    height: fit-content;
   }
   &__person-card{
     background: rgb(1,4,17);
@@ -40,6 +73,9 @@
       align-content: center;
       padding-bottom: 1.7rem;
       border-bottom: 1px solid $black;
+      @media (max-width: 1024px){
+        gap: 1rem;
+      }
 
       &__profile-picture{
         border-radius: 100%;

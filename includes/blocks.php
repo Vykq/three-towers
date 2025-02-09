@@ -3,7 +3,10 @@
 global $blocks;
 
 $blocks = array(
-    'main-hero'                 => 'Main hero',
+    'main-hero' => 'Main hero',
+    'cta-block' => 'CTA block',
+    'steps-slider' => 'Steps slider',
+
 );
 
 add_action('acf/init', 'my_acf_init');
