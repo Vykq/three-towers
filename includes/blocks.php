@@ -6,6 +6,7 @@ $blocks = array(
     'main-hero' => 'Main hero',
     'cta-block' => 'CTA block',
     'steps-slider' => 'Steps slider',
+    'logos-slider' => 'Logos slider',
 
 );
 
