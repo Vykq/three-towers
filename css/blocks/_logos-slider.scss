@@ -2,6 +2,9 @@
   display: grid;
   margin: -2rem 0 2rem;
   padding:0 2%;
+  @media (max-width: 1024px){
+    margin-top: -3rem;
+  }
   &__container {
     //@include mainStructure();
   }
@@ -17,6 +20,9 @@
     display: grid;
     width: 127.5%;
     position:relative;
+    @media (max-width: 1280px){
+      width: 120%;
+    }
     @media (max-width: 768px){
       width: 100%;
     }
@@ -135,6 +141,14 @@
     font-size: 1.1rem;
     line-height: 150%;
     letter-spacing: -1;
-
+  }
+  &__slide-logo{
+    max-width: calc(100% - 2rem);
+    overflow: hidden;
+    max-height: 3rem;
+    img{
+      @include imageCover(50%, 50%);
+      object-fit: contain;
+    }
   }
 }

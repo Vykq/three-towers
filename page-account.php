@@ -7,6 +7,7 @@ get_header(); ?>
 
 
     <div class="page__account">
+    <div class="page__account__overlay"></div>
     <div class="container">
         <div class="page__account__wrapper">
             <div class="page__account__person-card-wrapper">

@@ -7,9 +7,41 @@ const logosSlider = () => {
         pagination: false,
         gap: '1.2rem',
         arrows: false,
+        width: '100%',
         padding:{
             right: '6rem'
         },
+        breakpoints: {
+            1900: {
+                padding: {
+                    right: '12rem'
+                },
+            },
+            1650: {
+                padding: {
+                    right: '18rem'
+                },
+            },
+            1536: {
+                padding: {
+                    right: '15rem'
+                },
+            },
+            1400: {
+                padding: {
+                    right: '18rem'
+                },
+            },
+            1280: {
+                padding: {
+                    right: '0rem'
+                },
+                perPage: 2,
+            },
+            768: {
+                perPage: 1,
+            }
+        }
     }).mount();
 
 
